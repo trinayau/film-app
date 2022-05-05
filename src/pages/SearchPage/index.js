@@ -16,7 +16,7 @@ const SearchPage = () => {
                 const result = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchString}`);
                 setShowData(result.data);
             } catch (err) {
-                console.log(err);
+                console.error(err);
             }
         }
         searchApi(submitValue);
@@ -29,6 +29,7 @@ const SearchPage = () => {
     }
 
     function handleSubmit(e) {
+        e.preventDefault();
         setSubmitValue(inputValue);
         setInputValue("");
     }
