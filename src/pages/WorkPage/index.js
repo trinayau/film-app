@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import axios from 'axios';
 
 const WorkPage = () => {
-    return <h1>I show a single work.</h1>
+
+    const { name } = useParams();
+    const [showData, setShowData] = useState({});
+
+    useEffect(() => {
+
+        async function getShowData(name) {
+            try {
+                const result = await axios.get(`https://api.tvmaze.com/singlesearch/shows?q=${name}`);
+                setShowData(result.data);
+            } catch (err) {
+                console.error(err)
+            }
+        }
+        getShowData(name);
+
+    }, [name])
+   
+
+    return <>
+            <h1>{showData.name}</h1>
+            <div>{showData.summary}</div>
+           </>
 }
 
 export default WorkPage;
