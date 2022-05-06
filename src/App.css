@@ -1,0 +1,27 @@
+nav a{
+    padding: 1rem;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+.show-link {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    width:fit-content;
+    transition: all ease-in-out 0.2s;
+}
+
+.show-link:hover {
+    background-color:lavender;
+}
+
+nav .active {
+    color:darkgreen;
+    font-weight: bold;
+}
