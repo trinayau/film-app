@@ -4,7 +4,7 @@ import { Outlet, NavLink} from "react-router-dom";
 const Layout = () => {
     return<>
     <header>
-    <h1>Khari - App</h1>
+    <h1> 🍿 Movie Search App</h1>
         <nav>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
@@ -12,7 +12,7 @@ const Layout = () => {
         </nav>
     </header>
         <Outlet/>
-        <footer>Made with ❤️ by Geberu</footer>
+        <footer style={{textAlign: 'center'}}>Made with ❤️ by Geberu</footer>
     </>
 }
 

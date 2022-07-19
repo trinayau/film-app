@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { ShowCard } from "../../components";
 import axios from 'axios';
 const WorkPage = () => {
 
     //destructure params down to the value name
     const {name} = useParams();
-    const [showData, setShowData] = useState({});
+    const [showData, setShowData] = useState({rating: {}, image: {medium: {}}});
+    const navigate = useNavigate()
+    function handleClick() {
+        navigate(-1);
+    }
+    
 
     useEffect(() =>{ 
         async function getShowData(name) {
@@ -21,10 +27,11 @@ const WorkPage = () => {
         getShowData(name);
         }, [name])
 
-    return ( <>
-    <h2>{showData.name}</h2>
-    <div>{showData.summary}</div>
-    </>);
+        //for testing- screen.getByRole("button, { name: "Back" }") looking for button with name of back -> what the button says it's called
+
+       
+
+    return ( <ShowCard name={showData.name} summary={showData.summary} image={showData.image} rating={showData.rating}/>)
 }
  
 export default WorkPage;

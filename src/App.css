@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 nav a{
     padding: 1rem;
     text-decoration: none;
@@ -24,4 +30,33 @@ a {
 nav .active {
     color:darkgreen;
     font-weight: bold;
+}
+
+img{
+    height: 250px;
+    border-radius: 15px;
+
+}
+
+.ratingStars {
+    background-color:slateblue;
+    padding: 15px;
+    width:fit-content;
+    border-radius: 15px;
+    transition: all ease-in 0.4ms;
+}
+
+.ratingStars:hover{
+    background-color: slategrey;
+}
+
+button {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: palevioletred;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color:pink;
 }

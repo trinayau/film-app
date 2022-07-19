@@ -5,7 +5,7 @@ import axios from 'axios';
 const SearchPage = () => {
 
     const [inputValue, setInputValue] = useState("");
-    const [submitValue, setSubmitValue] = useState("Dog");
+    const [submitValue, setSubmitValue] = useState("Ponyo");
     const [showData, setShowData] = useState([]);
     //Build navigator object
     const navigate = useNavigate();
