@@ -12,7 +12,7 @@ const Layout = () => {
         </nav>
     </header>
         <Outlet/>
-        <footer style={{textAlign: 'center'}}>Made with ❤️ by Geberu</footer>
+        <footer style={{textAlign: 'center'}}>Open-source with ❤️ by <a href="https://github.com/trinayau/film-app" target="_blank">Trina</a></footer>
     </>
 }
 
